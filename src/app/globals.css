@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b1a33;
+  --navy-2: #132744;
+  --navy-3: #1b3558;
+  --gold: #c8973e;
+  --gold-lt: #e0b866;
+  --white: #fff;
+  --g50: #f8fafc;
+  --g100: #f1f5f9;
+  --g200: #e2e8f0;
+  --g300: #cbd5e1;
+  --g400: #94a3b8;
+  --denim: #5b7c9a;
+  --heading: #2e4a66;
+  --ink: #4a6b85;
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-navy-3: var(--navy-3);
+  --color-gold: var(--gold);
+  --color-gold-lt: var(--gold-lt);
+  --color-g50: var(--g50);
+  --color-g100: var(--g100);
+  --color-g200: var(--g200);
+  --color-g300: var(--g300);
+  --color-g400: var(--g400);
+  --color-denim: var(--denim);
+  --color-heading: var(--heading);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--g50);
+  color: var(--denim);
+}
+
+.nav-link {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--denim);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.nav-link:hover {
+  color: var(--heading);
+  background: var(--g100);
+}
+
+.hero-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 14px 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.tag-gold {
+  display: inline-block;
+  border-radius: 999px;
+  background: rgba(200, 151, 62, 0.1);
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tag-gold-dark {
+  display: inline-block;
+  border-radius: 999px;
+  background: rgba(200, 151, 62, 0.15);
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.32s ease-out both;
+}
+
+@keyframes step-blink {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 151, 62, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(200, 151, 62, 0);
+  }
+}
+
+.step-current {
+  animation: step-blink 1.2s ease-in-out infinite;
+}
+
+.email-step-current {
+  animation: step-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes van-drive {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0.3;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(75%);
+    opacity: 0.35;
+  }
+}
+
+.check-van {
+  animation: van-drive 1.35s ease-in-out infinite;
+}
+
+@keyframes arm-swing {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(18deg);
+  }
+}
+
+.check-arm {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: arm-swing 0.55s ease-in-out infinite;
+}
+
+@keyframes box-lift {
+  0%,
+  40% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-6px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.check-box {
+  animation: box-lift 1.35s ease-in-out infinite;
+}
+
+@keyframes msg-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.check-msg {
+  animation: msg-fade 0.25s ease-out both;
+}
+
+@keyframes timeline-in {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline > li {
+  animation: timeline-in 0.3s ease-out both;
+}
+
+.timeline > li:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.timeline > li:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.timeline > li:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.timeline > li:nth-child(4) {
+  animation-delay: 0.16s;
+}
+.timeline > li:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .step-current,
+  .email-step-current,
+  .check-van,
+  .check-arm,
+  .check-box,
+  .check-msg,
+  .timeline > li {
+    animation: none;
+  }
+}
