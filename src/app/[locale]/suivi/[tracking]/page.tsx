@@ -4,18 +4,14 @@ import { StatusHero } from "@/components/relais/StatusHero";
 import { TrackingLoadDone } from "@/components/relais/TrackingLoadDone";
 import { TrackingSearch } from "@/components/relais/TrackingSearch";
 import { TrackingTimeline } from "@/components/relais/TrackingTimeline";
-import { isLocale, locales, type Locale } from "@/i18n/config";
+import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getEventStates } from "@/lib/demo-parcel";
+import { getParcelForTracking } from "@/lib/get-parcel-for-tracking";
 import { getDemoParcels } from "@/lib/get-demo-parcels";
 import { notFound } from "next/navigation";
 
 export const instant = false;
-
-export function generateStaticParams() {
-  const numbers = ["ER680145741921FR", "ER999000111222FR"];
-  return locales.flatMap((locale) => numbers.map((tracking) => ({ locale, tracking })));
-}
 
 export default async function TrackingDetailPage({
   params,
@@ -26,14 +22,10 @@ export default async function TrackingDetailPage({
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;
   const dict = getDictionary(locale);
-  const { delivered, inTransit } = getDemoParcels(dict);
-  const demos: Record<string, typeof delivered> = {
-    [delivered.trackingNumber]: delivered,
-    [inTransit.trackingNumber]: inTransit,
-  };
+  const { delivered } = getDemoParcels(dict);
 
   const decoded = decodeURIComponent(tracking);
-  const parcel = demos[decoded];
+  const parcel = await getParcelForTracking(decoded, locale);
   const t = dict.tracking;
 
   if (!parcel) {

@@ -158,6 +158,12 @@ const fr: Dictionary = {
     inTransitTitle: "Colis en cours de livraison",
     inTransitDetail:
       "Votre colis est sur le réseau de distribution. Livraison prévue sous 24 à 48 h.",
+    processingTitle: "Colis en préparation",
+    processingDetail:
+      "Votre envoi est enregistré et sera pris en charge sous peu par notre réseau logistique.",
+    exceptionTitle: "Anomalie sur votre colis",
+    exceptionDetail:
+      "Un incident a été signalé. Notre équipe vous contactera ou mettra à jour le suivi sous 24 h.",
     destination: "Zone urbaine — réseau international",
     events: [
       { label: "Colis pris en charge", location: "Hub logistique régional" },

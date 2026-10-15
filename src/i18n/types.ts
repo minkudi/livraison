@@ -83,6 +83,10 @@ export type Dictionary = {
     deliveredDetail: string;
     inTransitTitle: string;
     inTransitDetail: string;
+    processingTitle: string;
+    processingDetail: string;
+    exceptionTitle: string;
+    exceptionDetail: string;
     destination: string;
     events: { label: string; location: string }[];
   };

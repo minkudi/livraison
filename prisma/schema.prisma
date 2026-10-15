@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Parcel {
+  id                 String          @id @default(cuid())
+  trackingNumber     String          @unique
+  recipientEmail     String
+  notificationLocale String
+  status             String
+  autoNotify         Boolean         @default(false)
+  destination        String
+  estimatedDelivery  String?
+  statusTitle        String
+  statusDetail       String
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  events             TrackingEvent[]
+  emailLogs          EmailLog[]
+}
+
+model TrackingEvent {
+  id         String   @id @default(cuid())
+  parcelId   String
+  parcel     Parcel   @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+  sortOrder  Int
+  icon       String
+  label      String
+  location   String
+  occurredAt DateTime
+}
+
+model EmailLog {
+  id         String   @id @default(cuid())
+  parcelId   String
+  parcel     Parcel   @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+  locale     String
+  status     String
+  success    Boolean
+  providerId String?
+  error      String?
+  createdAt  DateTime @default(now())
+}

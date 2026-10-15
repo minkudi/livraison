@@ -156,6 +156,12 @@ const nl: Dictionary = {
     deliveredDetail: "Uw pakket werd op 6 oktober 2026 aan de ontvanger overhandigd.",
     inTransitTitle: "Pakket onderweg voor levering",
     inTransitDetail: "Uw pakket is op het distributienetwerk. Verwacht binnen 24–48 uur.",
+    processingTitle: "Pakket in voorbereiding",
+    processingDetail:
+      "Uw zending is geregistreerd en wordt binnenkort door ons logistieke netwerk opgepakt.",
+    exceptionTitle: "Probleem met uw pakket",
+    exceptionDetail:
+      "Er is een incident gemeld. Ons team neemt contact op of werkt de tracking binnen 24 uur bij.",
     destination: "Stedelijk gebied — internationaal netwerk",
     events: [
       { label: "Pakket in ontvangst", location: "Regionaal logistiek hub" },

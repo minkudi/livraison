@@ -4,16 +4,17 @@ import Link from "next/link";
 export function ProSatLogo({
   href = "/",
   inverted = false,
+  asLink = true,
 }: {
   href?: string;
   inverted?: boolean;
+  /** false when the logo sits inside another link (avoids nested &lt;a&gt;) */
+  asLink?: boolean;
 }) {
-  return (
-    <Link
-      href={href}
-      className={`inline-flex items-center gap-3 no-underline ${inverted ? "text-white" : ""}`}
-      aria-label="PRO SAT — Home"
-    >
+  const className = `inline-flex items-center gap-3 no-underline ${inverted ? "text-white" : ""}`;
+
+  const content = (
+    <>
       <span
         className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
           inverted ? "bg-white/10 ring-1 ring-white/15" : "bg-denim ring-1 ring-denim/20"
@@ -57,6 +58,16 @@ export function ProSatLogo({
           SAT
         </span>
       </span>
+    </>
+  );
+
+  if (!asLink) {
+    return <span className={className}>{content}</span>;
+  }
+
+  return (
+    <Link href={href} className={className} aria-label="PRO SAT — Home">
+      {content}
     </Link>
   );
 }

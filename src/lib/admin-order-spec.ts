@@ -1,5 +1,5 @@
 /**
- * Spécification admin (implémentation ultérieure — pas de page admin pour l’instant).
+ * Spécification admin — implémentée sous `/admin` (voir `src/app/admin`, `src/lib/parcel-db.ts`).
  *
  * ## Langue des e-mails
  * - À la création / édition d’une commande, l’admin choisit `notificationLocale` (fr | en | nl | de).
@@ -11,7 +11,7 @@
  * - Boutons de **changement de statut** (ex. « passer en livraison ») → met à jour la timeline + option d’envoi mail.
  * - Bouton **« Envoyer l’e-mail de notification »** : envoie le template du statut **actuel** sans tout re-sauvegarder.
  * - Option : envoi automatique à chaque changement de statut (case à cocher par colis ou global).
- * - Journal : `email_log` (date, locale, statut, succès/échec Resend).
+ * - Journal : `email_log` (date, locale, statut, succès/échec SMTP).
  *
  * ## Compte admin
  * - Un seul compte fixe (credentials en variables d’environnement).

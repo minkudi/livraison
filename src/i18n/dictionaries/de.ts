@@ -156,6 +156,12 @@ const de: Dictionary = {
     deliveredDetail: "Ihr Paket wurde am 6. Oktober 2026 an den Empfänger übergeben.",
     inTransitTitle: "Paket in Zustellung",
     inTransitDetail: "Ihr Paket ist im Zustellnetz. Erwartet innerhalb von 24–48 Stunden.",
+    processingTitle: "Paket in Vorbereitung",
+    processingDetail:
+      "Ihre Sendung ist registriert und wird in Kürze von unserem Logistiknetz übernommen.",
+    exceptionTitle: "Problem mit Ihrem Paket",
+    exceptionDetail:
+      "Ein Vorfall wurde gemeldet. Unser Team meldet sich oder aktualisiert die Sendungsverfolgung innerhalb von 24 Stunden.",
     destination: "Stadtgebiet — internationales Netz",
     events: [
       { label: "Paket angenommen", location: "Regionales Logistik-Hub" },

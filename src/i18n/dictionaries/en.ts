@@ -155,6 +155,12 @@ const en: Dictionary = {
     deliveredDetail: "Your parcel was delivered on 6 October 2026 to the recipient.",
     inTransitTitle: "Parcel out for delivery",
     inTransitDetail: "Your parcel is on the delivery network. Expected within 24–48 hours.",
+    processingTitle: "Parcel being prepared",
+    processingDetail:
+      "Your shipment is registered and will be handed to our logistics network shortly.",
+    exceptionTitle: "Issue with your parcel",
+    exceptionDetail:
+      "An incident was reported. Our team will contact you or update tracking within 24 hours.",
     destination: "Urban area — international network",
     events: [
       { label: "Parcel collected", location: "Regional logistics hub" },
