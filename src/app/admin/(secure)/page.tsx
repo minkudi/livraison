@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { requireAdminSession } from "@/lib/admin-auth";
 import { listParcels } from "@/lib/parcel-db";
-import { STATUS_LABELS_FR } from "@/lib/parcel-status";
+import { formatDateTimeAdmin, STATUS_LABELS_FR } from "@/lib/parcel-status";
 import type { ParcelStatus } from "@/lib/admin-order-spec";
 
 export const instant = false;
@@ -67,7 +67,7 @@ export default async function AdminDashboardPage() {
                     </span>
                   </td>
                   <td className="px-4 py-3 text-xs text-[#5b7c9a]">
-                    {p.updatedAt.toLocaleString("fr-FR")}
+                    {formatDateTimeAdmin(p.updatedAt)}
                   </td>
                 </tr>
               ))

@@ -6,6 +6,7 @@ import type { TimelineIconId } from "@/components/relais/icons/LogisticsIcons";
 import { prisma } from "@/lib/prisma";
 import {
   buildDefaultEvents,
+  eventLocationForDisplay,
   formatEventAt,
   generateTrackingNumber,
   parcelStatusIsValid,
@@ -41,7 +42,7 @@ export function mapDbParcelToUi(
     id: ev.id,
     icon: ev.icon as TimelineIconId,
     label: ev.label,
-    location: ev.location,
+    location: eventLocationForDisplay(ev.icon, ev.location, row.destination),
     at: formatEventAt(ev.occurredAt, eventLocale),
   }));
 
@@ -78,7 +79,8 @@ export async function createParcel(input: CreateParcelInput) {
     trackingNumber = generateTrackingNumber();
   }
 
-  const events = buildDefaultEvents(dict);
+  const destination = input.destination.trim() || dict.parcel.destination;
+  const events = buildDefaultEvents(dict, new Date(), destination);
 
   return prisma.parcel.create({
     data: {
@@ -87,7 +89,7 @@ export async function createParcel(input: CreateParcelInput) {
       notificationLocale: input.notificationLocale,
       status,
       autoNotify: input.autoNotify ?? false,
-      destination: input.destination.trim() || dict.parcel.destination,
+      destination,
       estimatedDelivery: input.estimatedDelivery?.trim() || undefined,
       statusTitle: copy.title,
       statusDetail: copy.detail,
@@ -116,12 +118,13 @@ export type UpdateParcelInput = {
 };
 
 export async function updateParcel(id: string, input: UpdateParcelInput) {
-  return prisma.parcel.update({
+  const destination = input.destination?.trim();
+  const row = await prisma.parcel.update({
     where: { id },
     data: {
       recipientEmail: input.recipientEmail?.trim(),
       notificationLocale: input.notificationLocale,
-      destination: input.destination?.trim(),
+      destination,
       estimatedDelivery: input.estimatedDelivery?.trim(),
       autoNotify: input.autoNotify,
       statusTitle: input.statusTitle?.trim(),
@@ -129,6 +132,18 @@ export async function updateParcel(id: string, input: UpdateParcelInput) {
     },
     include: { events: { orderBy: { sortOrder: "asc" } }, emailLogs: { orderBy: { createdAt: "desc" }, take: 20 } },
   });
+  if (destination) {
+    await prisma.trackingEvent.updateMany({
+      where: { parcelId: id, icon: "delivered" },
+      data: { location: destination },
+    });
+    const events = await prisma.trackingEvent.findMany({
+      where: { parcelId: id },
+      orderBy: { sortOrder: "asc" },
+    });
+    return { ...row, events };
+  }
+  return row;
 }
 
 export async function setParcelStatus(

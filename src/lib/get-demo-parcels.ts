@@ -22,11 +22,12 @@ export function getDemoParcels(dict: Dictionary): {
   delivered: Parcel;
   inTransit: Parcel;
 } {
+  const last = dict.parcel.events.length - 1;
   const events: TrackingEvent[] = dict.parcel.events.map((e, i) => ({
     id: String(i + 1),
     icon: EVENT_ICONS[i],
     label: e.label,
-    location: e.location,
+    location: i === last ? dict.parcel.destination : e.location,
     at: EVENT_DATES[i],
   }));
 

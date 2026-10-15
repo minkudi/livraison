@@ -16,7 +16,7 @@ export function EmailPreviewView() {
     <RelaisShell>
       <main className="content flex-1">
         <div className="mx-auto max-w-4xl px-4 py-10 sm:px-8">
-          <Link href={`/${locale}/preview`} className="text-sm font-semibold text-navy hover:underline">
+          <Link href={`/${locale}`} className="text-sm font-semibold text-navy hover:underline">
             {dict.tracking.back}
           </Link>
           <h1 className="mt-4 text-2xl font-extrabold text-heading">{e.title}</h1>

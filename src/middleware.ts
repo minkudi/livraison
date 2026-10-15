@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
   }
 
   const url = request.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname === "/" ? "/preview" : pathname}`;
+  url.pathname = pathname === "/" ? `/${defaultLocale}` : `/${defaultLocale}${pathname}`;
   return NextResponse.redirect(url);
 }
 

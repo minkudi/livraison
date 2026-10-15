@@ -9,9 +9,9 @@ import { TopBar } from "./TopBar";
 export function SiteHeader() {
   const dict = useDictionary();
   const locale = useLocale();
-  const home = `/${locale}/preview`;
-  const services = `/${locale}/preview#services`;
-  const network = `/${locale}/preview#reseau`;
+  const home = `/${locale}`;
+  const services = `/${locale}#services`;
+  const network = `/${locale}#reseau`;
   const track = useLocalizedPath("/suivi");
 
   return (

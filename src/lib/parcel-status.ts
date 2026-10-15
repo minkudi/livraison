@@ -37,33 +37,63 @@ export function statusCopy(dict: Dictionary, status: ParcelStatus) {
   }
 }
 
-export function buildDefaultEvents(dict: Dictionary, baseDate = new Date()) {
+export const APP_TIME_ZONE = "Europe/Amsterdam";
+
+function localeForDates(locale: Locale) {
+  return locale === "en" ? "en-GB" : locale;
+}
+
+export function eventLocationForDisplay(icon: string, location: string, destination: string) {
+  if (icon === "delivered") {
+    const d = destination.trim();
+    if (d) return d;
+  }
+  return location;
+}
+
+export function buildDefaultEvents(dict: Dictionary, baseDate = new Date(), destination?: string) {
   const labels = dict.parcel.events;
+  const deliveredLocation = destination?.trim() || dict.parcel.destination;
   return labels.map((e, i) => {
     const d = new Date(baseDate);
     d.setDate(d.getDate() - (labels.length - 1 - i));
     d.setHours(8 + i, 12, 0, 0);
+    const isDelivered = i === labels.length - 1;
     return {
       sortOrder: i,
       icon: EVENT_ICONS[i],
       label: e.label,
-      location: e.location,
+      location: isDelivered ? deliveredLocation : e.location,
       occurredAt: d,
     };
   });
 }
 
 export function formatEventAt(d: Date, locale: Locale) {
-  const date = d.toLocaleDateString(locale === "en" ? "en-GB" : locale, {
+  const loc = localeForDates(locale);
+  const date = d.toLocaleDateString(loc, {
+    timeZone: APP_TIME_ZONE,
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
   });
-  const time = d.toLocaleTimeString(locale === "en" ? "en-GB" : locale, {
+  const time = d.toLocaleTimeString(loc, {
+    timeZone: APP_TIME_ZONE,
     hour: "2-digit",
     minute: "2-digit",
   });
   return `${date} — ${time}`;
+}
+
+export function formatDateTimeAdmin(d: Date) {
+  return d.toLocaleString("fr-FR", {
+    timeZone: APP_TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }
 
 export function generateTrackingNumber() {

@@ -50,7 +50,7 @@ export default async function TrackingDetailPage({
             <div className="mt-8 rounded-2xl border border-g200 bg-white p-6 text-left shadow-sm">
               <TrackingSearch compact />
             </div>
-            <Link href={`/${locale}/preview`} className="mt-6 inline-block text-sm font-bold text-navy">
+            <Link href={`/${locale}`} className="mt-6 inline-block text-sm font-bold text-navy">
               {t.backHome}
             </Link>
           </div>

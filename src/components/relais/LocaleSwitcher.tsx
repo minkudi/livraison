@@ -13,9 +13,13 @@ export function LocaleSwitcher() {
     const parts = pathname.split("/");
     if (locales.includes(parts[1] as Locale)) {
       parts[1] = locale;
-      return parts.join("/") || `/${locale}/preview`;
+      if (parts[2] === "preview" && parts.length === 3) {
+        return `/${locale}`;
+      }
+      const href = parts.join("/");
+      return href || `/${locale}`;
     }
-    return `/${locale}/preview`;
+    return `/${locale}`;
   }
 
   return (

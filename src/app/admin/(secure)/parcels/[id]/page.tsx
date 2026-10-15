@@ -6,7 +6,7 @@ import type { ParcelStatus } from "@/lib/admin-order-spec";
 import type { Locale } from "@/i18n/config";
 import { requireAdminSession } from "@/lib/admin-auth";
 import { prisma } from "@/lib/prisma";
-import { STATUS_LABELS_FR } from "@/lib/parcel-status";
+import { formatDateTimeAdmin, STATUS_LABELS_FR } from "@/lib/parcel-status";
 
 export const instant = false;
 
@@ -94,7 +94,7 @@ export default async function AdminParcelDetailPage({
                 className="flex flex-wrap items-center justify-between gap-2 rounded-lg bg-[#F8FAFC] px-3 py-2"
               >
                 <span>
-                  {log.createdAt.toLocaleString("fr-FR")} · {log.locale} · {log.status}
+                  {formatDateTimeAdmin(log.createdAt)} · {log.locale} · {log.status}
                 </span>
                 <span className={log.success ? "font-bold text-green-700" : "font-bold text-red-600"}>
                   {log.success ? "OK" : log.error ?? "Échec"}

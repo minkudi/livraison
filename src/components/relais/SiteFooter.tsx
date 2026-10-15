@@ -7,7 +7,7 @@ import { useDictionary, useLocale } from "@/i18n/LocaleContext";
 export function SiteFooter() {
   const dict = useDictionary();
   const locale = useLocale();
-  const home = `/${locale}/preview`;
+  const home = `/${locale}`;
   const loc = (path: string) => `/${locale}${path}`;
   const l = dict.footer.links;
 

@@ -33,7 +33,7 @@ export default async function LegalSlugPage({
   if (!page) notFound();
 
   return (
-    <LegalPage title={page.title} backHref={`/${locale}/preview`} backLabel={dict.legal.back}>
+    <LegalPage title={page.title} backHref={`/${locale}`} backLabel={dict.legal.back}>
       {page.paragraphs.map((p) => (
         <p key={p}>{p}</p>
       ))}

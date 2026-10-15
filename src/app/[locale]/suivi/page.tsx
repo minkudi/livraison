@@ -25,7 +25,7 @@ export default async function SuiviPage({
     <RelaisShell>
       <main className="content flex flex-1 items-center justify-center px-4 py-12 sm:py-16">
         <div className="w-full max-w-lg">
-          <Link href={`/${locale}/preview`} className="text-sm font-semibold text-navy hover:underline">
+          <Link href={`/${locale}`} className="text-sm font-semibold text-navy hover:underline">
             {t.back}
           </Link>
           <h1 className="mt-4 text-2xl font-extrabold text-heading">{t.pageTitle}</h1>
