@@ -7,18 +7,20 @@
   --gold: #c8973e;
   --gold-lt: #e0b866;
   --white: #fff;
-  --g50: #f8fafc;
-  --g100: #f1f5f9;
-  --g200: #e2e8f0;
-  --g300: #cbd5e1;
+  --g50: #f7f4ef;
+  --g100: #f3eee6;
+  --g200: #e7dfd2;
+  --g300: #d9cdb8;
   --g400: #94a3b8;
-  --denim: #5b7c9a;
-  --heading: #2e4a66;
-  --ink: #4a6b85;
+  --denim: #3d5c78;
+  --gold-ink: #6e4f16;
+  --heading: #0b1a33;
+  --ink: #3d5c78;
 }
 
 @theme inline {
-  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-sans: var(--font-raleway), "Segoe UI", sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
   --color-navy: var(--navy);
   --color-navy-2: var(--navy-2);
   --color-navy-3: var(--navy-3);
@@ -30,6 +32,7 @@
   --color-g300: var(--g300);
   --color-g400: var(--g400);
   --color-denim: var(--denim);
+  --color-gold-ink: var(--gold-ink);
   --color-heading: var(--heading);
 }
 
@@ -37,6 +40,23 @@ body {
   font-family: var(--font-sans);
   background: var(--g50);
   color: var(--denim);
+  caret-color: var(--navy);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: var(--gold-lt);
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-ink);
+  outline-offset: 3px;
 }
 
 .nav-link {
@@ -53,8 +73,8 @@ body {
 }
 
 .hero-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(rgba(11, 26, 51, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 .hero-pill {
@@ -62,12 +82,12 @@ body {
   align-items: center;
   gap: 6px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--g200);
+  background: #fff;
   padding: 6px 14px 6px 10px;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--heading);
 }
 
 .tag-gold {
@@ -127,77 +147,6 @@ body {
   animation: step-blink 1.2s ease-in-out infinite;
 }
 
-@keyframes van-drive {
-  0% {
-    transform: translateX(-5%);
-    opacity: 0.3;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(75%);
-    opacity: 0.35;
-  }
-}
-
-.check-van {
-  animation: van-drive 1.35s ease-in-out infinite;
-}
-
-@keyframes arm-swing {
-  0%,
-  100% {
-    transform: rotate(-8deg);
-  }
-  50% {
-    transform: rotate(18deg);
-  }
-}
-
-.check-arm {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: arm-swing 0.55s ease-in-out infinite;
-}
-
-@keyframes box-lift {
-  0%,
-  40% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-6px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.check-box {
-  animation: box-lift 1.35s ease-in-out infinite;
-}
-
-@keyframes msg-fade {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.check-msg {
-  animation: msg-fade 0.25s ease-out both;
-}
 
 @keyframes timeline-in {
   from {
@@ -234,11 +183,67 @@ body {
   .page-enter,
   .step-current,
   .email-step-current,
-  .check-van,
-  .check-arm,
-  .check-box,
-  .check-msg,
   .timeline > li {
+    animation: none;
+  }
+}
+
+/* Spa-inspired soft animations */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Radial gradient helper */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Soft hover lift */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-soft {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-gentle {
     animation: none;
   }
 }

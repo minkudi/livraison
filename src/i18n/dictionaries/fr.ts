@@ -10,8 +10,10 @@ const fr: Dictionary = {
     "Réseau international — +120 plateformes logistiques — Livraison standard ou express",
   nav: {
     home: "Accueil",
-    services: "Services",
-    network: "Notre réseau",
+    services: "Exemple",
+    network: "Parcours",
+    menu: "Menu",
+    label: "Navigation",
     track: "Suivre un colis",
     trackShort: "Suivi",
   },
@@ -32,9 +34,7 @@ const fr: Dictionary = {
     placeholder: "Numéro de suivi",
     submit: "Rechercher mon colis",
     searching: "Recherche en cours…",
-    checkMsg1: "Connexion au réseau logistique…",
-    checkMsg2: "Interrogation des hubs…",
-    checkMsg3: "Mise à jour du trajet…",
+    cancel: "Annuler",
   },
   stats: [
     { value: "2.4", suffix: "M", label: "Colis livrés en 2025" },
@@ -42,6 +42,69 @@ const fr: Dictionary = {
     { value: "190", suffix: "+", label: "Destinations couvertes" },
     { value: "4.6", suffix: "/5", label: "Satisfaction client" },
   ],
+  statsSection: {
+    tag: "Excellence",
+    title: "Notre engagement en chiffres",
+  },
+  beforeAfter: {
+    tag: "Transformation",
+    title: "L'expérience avant et après PRO SAT",
+    subtitle: "Découvrez comment nous transformons l'expérience de livraison",
+    before: "Avant",
+    after: "Après",
+    viewLabel: "Voir la transformation",
+    items: [
+      {
+        beforeTitle: "Colis en attente",
+        beforeText: "Incertitude sur la livraison",
+        afterTitle: "Livraison confirmée",
+        afterText: "Suivi en temps réel et notifications",
+      },
+      {
+        beforeTitle: "Délais inconnus",
+        beforeText: "Pas de visibilité sur le parcours",
+        afterTitle: "Estimation précise",
+        afterText: "Timeline complète et transparente",
+      },
+      {
+        beforeTitle: "Communication limitée",
+        beforeText: "Besoin de contacter le support",
+        afterTitle: "Informé automatiquement",
+        afterText: "Notifications à chaque étape clé",
+      },
+    ],
+  },
+  testimonials: {
+    tag: "Témoignages",
+    title: "Ce que disent nos clients",
+    subtitle: "La satisfaction de nos clients est au cœur de notre engagement",
+    viewLabel: "Voir le témoignage de",
+    items: [
+      {
+        name: "Sophie Laurent",
+        role: "Entreprise e-commerce",
+        content:
+          "PRO SAT a transformé notre expérience de livraison. Le suivi en temps réel rassure nos clients et réduit considérablement nos demandes au support.",
+      },
+      {
+        name: "Marc Dubois",
+        role: "Destinataire particulier",
+        content:
+          "J'apprécie la transparence totale sur l'acheminement de mes colis. Les notifications sont claires et arrivent au bon moment.",
+      },
+      {
+        name: "Clara Mercier",
+        role: "Responsable logistique",
+        content:
+          "La fiabilité du réseau et la qualité du suivi font de PRO SAT notre partenaire privilégié pour les expéditions internationales.",
+      },
+    ],
+    trust: {
+      deliveries: "Livraisons réussies",
+      satisfaction: "Satisfaction client",
+      parcels: "Colis livrés en 2025",
+    },
+  },
   services: {
     tag: "Nos services",
     title: "Une logistique complète et intégrée",
@@ -114,6 +177,9 @@ const fr: Dictionary = {
     trackingNumber: "Numéro de suivi",
     estimated: "Livraison estimée",
     destination: "Destination",
+    stepDone: "Étape terminée",
+    stepCurrent: "Étape en cours",
+    stepUpcoming: "Étape à venir",
   },
   emailPreview: {
     title: "Aperçu e-mail transactionnel",

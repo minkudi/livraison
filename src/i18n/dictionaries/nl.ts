@@ -10,8 +10,10 @@ const nl: Dictionary = {
     "Internationaal netwerk — 120+ logistieke platforms — Standaard of expreslevering",
   nav: {
     home: "Home",
-    services: "Diensten",
-    network: "Ons netwerk",
+    services: "Voorbeeld",
+    network: "Traject",
+    menu: "Menu",
+    label: "Navigatie",
     track: "Pakket volgen",
     trackShort: "Volgen",
   },
@@ -32,9 +34,7 @@ const nl: Dictionary = {
     placeholder: "Trackingnummer",
     submit: "Pakket zoeken",
     searching: "Zoeken…",
-    checkMsg1: "Verbinding met logistiek netwerk…",
-    checkMsg2: "Hubs raadplegen…",
-    checkMsg3: "Route bijwerken…",
+    cancel: "Annuleren",
   },
   stats: [
     { value: "2.4", suffix: "M", label: "Pakketten geleverd in 2025" },
@@ -42,6 +42,69 @@ const nl: Dictionary = {
     { value: "190", suffix: "+", label: "Bestemmingen" },
     { value: "4.6", suffix: "/5", label: "Klanttevredenheid" },
   ],
+  statsSection: {
+    tag: "Excellentie",
+    title: "Onze inzet in cijfers",
+  },
+  beforeAfter: {
+    tag: "Transformatie",
+    title: "De ervaring voor en na PRO SAT",
+    subtitle: "Ontdek hoe wij de bezorgervaring transformeren",
+    before: "Voor",
+    after: "Na",
+    viewLabel: "Transformatie bekijken",
+    items: [
+      {
+        beforeTitle: "Pakket in afwachting",
+        beforeText: "Onzekerheid over de levering",
+        afterTitle: "Levering bevestigd",
+        afterText: "Realtime tracking en meldingen",
+      },
+      {
+        beforeTitle: "Onbekende levertijden",
+        beforeText: "Geen zicht op het traject",
+        afterTitle: "Nauwkeurige schatting",
+        afterText: "Volledige, transparante tijdlijn",
+      },
+      {
+        beforeTitle: "Beperkte communicatie",
+        beforeText: "Klantenservice moeten contacteren",
+        afterTitle: "Automatisch geïnformeerd",
+        afterText: "Meldingen bij elke belangrijke stap",
+      },
+    ],
+  },
+  testimonials: {
+    tag: "Beoordelingen",
+    title: "Wat onze klanten zeggen",
+    subtitle: "Klanttevredenheid staat centraal in onze belofte",
+    viewLabel: "Beoordeling bekijken van",
+    items: [
+      {
+        name: "Sophie Laurent",
+        role: "E-commercebedrijf",
+        content:
+          "PRO SAT heeft onze bezorgervaring getransformeerd. Realtime tracking stelt onze klanten gerust en vermindert onze supportvragen aanzienlijk.",
+      },
+      {
+        name: "Marc Dubois",
+        role: "Particuliere ontvanger",
+        content:
+          "Ik waardeer de volledige transparantie over het traject van mijn pakketten. De meldingen zijn duidelijk en komen op het juiste moment.",
+      },
+      {
+        name: "Clara Mercier",
+        role: "Logistiek manager",
+        content:
+          "De betrouwbaarheid van het netwerk en de kwaliteit van de tracking maken PRO SAT onze voorkeurspartner voor internationale zendingen.",
+      },
+    ],
+    trust: {
+      deliveries: "Geslaagde leveringen",
+      satisfaction: "Klanttevredenheid",
+      parcels: "Pakketten geleverd in 2025",
+    },
+  },
   services: {
     tag: "Onze diensten",
     title: "Volledige, geïntegreerde logistiek",
@@ -114,6 +177,9 @@ const nl: Dictionary = {
     trackingNumber: "Trackingnummer",
     estimated: "Geschatte levering",
     destination: "Bestemming",
+    stepDone: "Voltooide stap",
+    stepCurrent: "Huidige stap",
+    stepUpcoming: "Komende stap",
   },
   emailPreview: {
     title: "Voorbeeld transactionele e-mail",

@@ -1,61 +1,69 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useDictionary } from "@/i18n/LocaleContext";
 import { CheckingScene } from "./CheckingScene";
 
-const MIN_OVERLAY_MS = 5000;
-
 const Ctx = createContext<{
-  startTrackingLoad: () => void;
+  startTrackingLoad: (trackingNumber: string) => void;
   endTrackingLoad: () => void;
+  cancelTrackingLoad: () => void;
+  takeCancelled: () => boolean;
 } | null>(null);
 
 export function TrackingLoadingProvider({ children }: { children: React.ReactNode }) {
-  const [active, setActive] = useState(false);
-  const startedAtRef = useRef<number | null>(null);
-  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const dict = useDictionary();
+  const [trackingNumber, setTrackingNumber] = useState<string | null>(null);
+  const cancelledRef = useRef(false);
 
-  useEffect(() => {
-    return () => {
-      if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
-    };
-  }, []);
-
-  const startTrackingLoad = useCallback(() => {
-    if (hideTimerRef.current) {
-      clearTimeout(hideTimerRef.current);
-      hideTimerRef.current = null;
-    }
-    startedAtRef.current = Date.now();
-    setActive(true);
+  const startTrackingLoad = useCallback((number: string) => {
+    cancelledRef.current = false;
+    setTrackingNumber(number);
   }, []);
 
   const endTrackingLoad = useCallback(() => {
-    const started = startedAtRef.current;
-    if (started == null) return;
-
-    const elapsed = Date.now() - started;
-    const remaining = Math.max(0, MIN_OVERLAY_MS - elapsed);
-
-    hideTimerRef.current = setTimeout(() => {
-      setActive(false);
-      startedAtRef.current = null;
-      hideTimerRef.current = null;
-    }, remaining);
+    setTrackingNumber(null);
   }, []);
 
+  const cancelTrackingLoad = useCallback(() => {
+    cancelledRef.current = true;
+    setTrackingNumber(null);
+  }, []);
+
+  const takeCancelled = useCallback(() => {
+    const cancelled = cancelledRef.current;
+    cancelledRef.current = false;
+    return cancelled;
+  }, []);
+
+  useEffect(() => {
+    if (!trackingNumber) return;
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") cancelTrackingLoad();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [trackingNumber, cancelTrackingLoad]);
+
   return (
-    <Ctx.Provider value={{ startTrackingLoad, endTrackingLoad }}>
+    <Ctx.Provider value={{ startTrackingLoad, endTrackingLoad, cancelTrackingLoad, takeCancelled }}>
       {children}
-      {active && (
+      {trackingNumber && (
         <div
           className="fixed inset-0 z-[300] flex items-center justify-center bg-g50/95 p-4"
           role="dialog"
           aria-modal="true"
-          aria-label="Chargement du suivi"
+          aria-labelledby="tracking-wait-title"
         >
-          <div className="w-full max-w-md shadow-lg">
-            <CheckingScene />
+          <div className="w-full max-w-md">
+            <CheckingScene trackingNumber={trackingNumber} />
+            <button
+              type="button"
+              className="mt-3 flex h-11 w-full items-center justify-center rounded-[10px] border border-g300 bg-white text-sm font-bold text-navy"
+              onClick={cancelTrackingLoad}
+            >
+              {dict.search.cancel}
+            </button>
           </div>
         </div>
       )}

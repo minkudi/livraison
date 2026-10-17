@@ -8,6 +8,8 @@ export type Dictionary = {
     home: string;
     services: string;
     network: string;
+    menu: string;
+    label: string;
     track: string;
     trackShort: string;
   };
@@ -27,11 +29,32 @@ export type Dictionary = {
     placeholder: string;
     submit: string;
     searching: string;
-    checkMsg1: string;
-    checkMsg2: string;
-    checkMsg3: string;
+    cancel: string;
   };
   stats: { value: string; suffix: string; label: string }[];
+  statsSection: { tag: string; title: string };
+  beforeAfter: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    before: string;
+    after: string;
+    viewLabel: string;
+    items: {
+      beforeTitle: string;
+      beforeText: string;
+      afterTitle: string;
+      afterText: string;
+    }[];
+  };
+  testimonials: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    viewLabel: string;
+    items: { name: string; role: string; content: string }[];
+    trust: { deliveries: string; satisfaction: string; parcels: string };
+  };
   services: {
     tag: string;
     title: string;
@@ -60,6 +83,9 @@ export type Dictionary = {
     trackingNumber: string;
     estimated: string;
     destination: string;
+    stepDone: string;
+    stepCurrent: string;
+    stepUpcoming: string;
   };
   emailPreview: {
     title: string;

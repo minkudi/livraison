@@ -47,21 +47,21 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer className="ftr mt-auto border-t border-g200 bg-navy text-white/70">
+    <footer className="ftr mt-auto border-t border-g200 bg-white text-denim">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-8">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <ProSatLogo href={home} inverted />
+            <ProSatLogo href={home} />
             <p className="mt-4 max-w-xs text-sm leading-relaxed">{dict.footer.about}</p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {columns.map((col) => (
               <div key={col.title}>
-                <p className="text-xs font-bold uppercase tracking-wider text-white/90">{col.title}</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-heading">{col.title}</p>
                 <ul className="mt-3 space-y-2 text-sm">
                   {col.links.map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className="transition hover:text-gold">
+                      <Link href={link.href} className="transition hover:text-gold-ink">
                         {link.label}
                       </Link>
                     </li>
@@ -71,11 +71,11 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-8 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-2 border-t border-g200 pt-8 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>{dict.footer.copyright}</p>
-          <p className="text-white/50">
+          <p>
             {dict.footer.support} ·{" "}
-            <a href="mailto:support@pro-sat.com" className="hover:text-gold">support@pro-sat.com</a>
+            <a href="mailto:support@pro-sat.com" className="hover:text-gold-ink">support@pro-sat.com</a>
           </p>
         </div>
       </div>

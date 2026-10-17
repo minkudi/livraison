@@ -74,7 +74,15 @@ export default async function TrackingDetailPage({
             <section className="rounded-2xl border border-g200 bg-white p-6 shadow-sm sm:p-8">
               <h2 className="text-lg font-bold text-heading">{t.history}</h2>
               <div className="mt-6">
-                <TrackingTimeline events={parcel.events} states={states} />
+                <TrackingTimeline
+                  events={parcel.events}
+                  states={states}
+                  labels={{
+                    done: t.stepDone,
+                    current: t.stepCurrent,
+                    upcoming: t.stepUpcoming,
+                  }}
+                />
               </div>
             </section>
           </div>

@@ -1,24 +1,27 @@
 "use client";
 
 import { RelaisShell } from "@/components/relais/RelaisShell";
-import { useDictionary, useLocale } from "@/i18n/LocaleContext";
+import { useDictionary } from "@/i18n/LocaleContext";
 import { CtaSection } from "./CtaSection";
 import { HeroSection } from "./HeroSection";
 import { HowSection } from "./HowSection";
-import { ServicesSection } from "./ServicesSection";
 import { StatsSection } from "./StatsSection";
+import { ServicesMenuSection } from "./ServicesMenuSection";
+import { BeforeAfterSection } from "./BeforeAfterSection";
+import { TestimonialsSection } from "./TestimonialsSection";
 
 export function HomePageView() {
   const dict = useDictionary();
-  const locale = useLocale();
 
-  return (
+    return (
     <RelaisShell>
       <HeroSection dict={dict} />
       <StatsSection dict={dict} />
-      <ServicesSection dict={dict} />
+      <ServicesMenuSection dict={dict} />
       <HowSection dict={dict} />
-      <CtaSection dict={dict} locale={locale} />
+      <BeforeAfterSection dict={dict} />
+      <TestimonialsSection dict={dict} />
+      <CtaSection dict={dict} />
     </RelaisShell>
   );
 }

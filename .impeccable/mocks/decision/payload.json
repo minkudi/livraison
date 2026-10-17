@@ -1,0 +1,155 @@
+{
+  "title": "Nouvelle direction visuelle",
+  "question": "Le site public devient un affichage que l’on sait déjà lire. Gardez cette direction, prenez une alternative, ou relancez.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Tableau à palettes",
+      "kicker": "THE ROLL",
+      "lineage": "tableau split-flap des gares et aéroports",
+      "thesis": "Le site public est le tableau de départ que le destinataire sait déjà lire : destination, heure, état, sur une seule ligne mécanique.",
+      "palette": ["#1a1814", "#f4ecd8", "#16140f", "#2a62e0", "#1c7a45", "#d23b32"],
+      "materials": ["palettes mécaniques", "caisson charbon", "chiffres peints"],
+      "viewport": "Plein cadre : le nom PRO SAT en module de palettes, la navigation en étiquettes, et une ligne géante où le numéro de suivi se compose case par case, avec RECHERCHER en palette pleine.",
+      "risk": "Retombe en gadget, ou en bandeau sombre plus carte blanche, si les palettes décorent une page ordinaire.",
+      "raised": [
+        {
+          "from": "challenger-hypercard",
+          "raise": "L’historique est une piste de palettes que l’on retraverse dans l’ordre exact."
+        },
+        {
+          "from": "challenger-sixpack",
+          "raise": "La ligne vivante montre la tendance : la palette précédente reste à demi tournée à côté de l’état actuel."
+        },
+        {
+          "from": "challenger-miura",
+          "raise": "Valider le numéro est une seule traction qui déploie tout le trajet lié sur le même tableau."
+        },
+        {
+          "from": "challenger-city",
+          "raise": "Chaque état possède son champ de couleur sur les palettes, pas un point sur un fond neutre."
+        },
+        {
+          "from": "challenger-couture",
+          "raise": "Un seul envoi est la ligne éclairée ; les services restent des rangées éteintes."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.jpg"
+    },
+    {
+      "id": "model-pick",
+      "label": "Affiche horaire",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "affiche d’information des gares européennes",
+      "thesis": "Une affiche de quai : une barre de ligne, des paires bilingues, et le suivi comme une destination que l’on complète.",
+      "palette": ["#f3f0e8", "#141414", "#f0c400", "#c73e2a"],
+      "materials": ["papier d’affiche", "grille imprimée", "barre émail"],
+      "viewport": "L’affiche est la page : PRO SAT en tête, une barre de ligne jaune qui contient le champ de suivi et Rechercher, puis les départs en lignes d’horaire.",
+      "risk": "C’est là qu’atterrissent la plupart des refontes logistiques une fois le marine et l’or quittés : familier, et facile à aplatir en bandeau plus cartes.",
+      "comp": ".impeccable/mocks/decision/model-pick.jpg"
+    },
+    {
+      "id": "challenger-teletext",
+      "label": "Page télétexte",
+      "verdict": "competitive",
+      "lineage": "magazine télétexte voyage",
+      "thesis": "PRO SAT comme une page télétexte : on adresse un colis par son numéro comme on appelait la page 310.",
+      "palette": ["#000000", "#ffff33", "#00ffff", "#33ff33", "#ff3333", "#ffffff"],
+      "materials": ["mosaïque de cellules", "phosphore", "grille fixe"],
+      "viewport": "Page 100, PRO SAT en double hauteur, le numéro tapé dans le coin comme un numéro de page, et les quatre étapes qui cyclent en sous-pages.",
+      "case": "Tient la clarté : un numéro de suivi se comporte déjà comme une adresse de page. Perd l’identification : on croise encore des tableaux à palettes, rarement un cycle télétexte.",
+      "risk": "Devient un jouet rétro si la grille n’est pas stricte.",
+      "comp": ".impeccable/mocks/decision/challenger-teletext.jpg",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-teletext-weather-mosaic-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-teletext-weather-mosaic.webp"
+    },
+    {
+      "id": "challenger-hypercard",
+      "label": "Pile HyperCard",
+      "verdict": "declined",
+      "lineage": "pile de cartes HyperCard",
+      "thesis": "Le suivi comme une boîte de cartes noir et blanc que l’on feuillette.",
+      "palette": ["#000000", "#ffffff", "#9a9a9a"],
+      "materials": ["bitmap une teinte", "boutons peints"],
+      "viewport": "Une carte fixe, boutons peints, historique en pile.",
+      "case": "Les destinataires ne se reconnaissent pas dans un outil d’auteur de 1987, et le public ne modifie pas les cartes.",
+      "risk": "Le mode auteur contredit un site que l’on consulte.",
+      "kept": "L’historique comme piste que l’on retraverse.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox.webp"
+    },
+    {
+      "id": "challenger-sixpack",
+      "label": "Six cadrans de nuit",
+      "verdict": "declined",
+      "lineage": "planche de bord d’avion de nuit",
+      "thesis": "Six instruments lumineux pour l’état, l’heure et la destination.",
+      "palette": ["#0c0c0c", "#d7ffe8", "#e7b15a", "#d23b32"],
+      "materials": ["verre de cadran", "marquage luminescent"],
+      "viewport": "Deux rangées de trois cadrans sur un panneau noir.",
+      "case": "C’est le tableau de bord interne que le brief écarte, et un cadran cache la phrase du statut.",
+      "risk": "Costume d’instrument, pas un affichage public.",
+      "kept": "L’état vivant montre une tendance, pas seulement une valeur.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack.webp"
+    },
+    {
+      "id": "challenger-miura",
+      "label": "Feuille dépliée",
+      "verdict": "declined",
+      "lineage": "voile pliée en Miura",
+      "thesis": "Le numéro tire une feuille et déploie le trajet en un champ de plis.",
+      "palette": ["#f7f7f4", "#c6a15b", "#8d8680", "#b7c9d6"],
+      "materials": ["feuille mate", "plis montagne et vallée"],
+      "viewport": "Un paquet compact qui s’ouvre en nappe quadrillée.",
+      "case": "Ce public ne connaît pas ce pli, et les identifiants de crease brouillent la phrase du statut.",
+      "risk": "Le geste remplace l’action de suivi.",
+      "kept": "Une seule commande déploie tout le trajet lié.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet.webp"
+    },
+    {
+      "id": "challenger-city",
+      "label": "Ville pliée",
+      "verdict": "declined",
+      "lineage": "ville endormie en courtepointe",
+      "thesis": "Les plateformes deviennent des quartiers qui rêvent chacun leur météo.",
+      "palette": ["#0b1a33", "#e0b866", "#f4efe4", "#6aa8c8"],
+      "materials": ["couture", "fenêtres brodées"],
+      "viewport": "Une carte de nuit pliée, chaque quartier teinté.",
+      "case": "La météo rêvée et l’or sur marine sont le costume et le ton déjà refusés.",
+      "risk": "Vitrine onirique qui cache le suivi.",
+      "kept": "Chaque état possède son propre champ de couleur.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold.webp"
+    },
+    {
+      "id": "challenger-couture",
+      "label": "Atelier miniature",
+      "verdict": "declined",
+      "lineage": "atelier de poupées couture",
+      "thesis": "Chaque service est un modèle numéroté sous papier de soie.",
+      "palette": ["#f6f1e8", "#e7c1c8", "#111111", "#b0893e"],
+      "materials": ["carton ivoire", "soie", "script doré"],
+      "viewport": "Une planche de lookbook, un envoi sous projecteur.",
+      "case": "Le ton premium miniature est précisément ce qui rendrait le résultat raté.",
+      "risk": "Luxe et jeu, à l’opposé d’un opérateur de livraison.",
+      "kept": "Un seul envoi au premier plan, le reste en retrait.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-couture-doll-atelier-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-couture-doll-atelier.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "steer": true,
+  "canon": true,
+  "canonCard": {
+    "label": "Le standard de la catégorie",
+    "thesis": "Le site transporteur habituel, joué droit : promesse, recherche, chiffres, trois services.",
+    "palette": ["#0b1a33", "#c8973e", "#ffffff", "#f8fafc"],
+    "materials": ["bandeau marine", "carte blanche", "action or"],
+    "viewport": "Bandeau sombre, titre à gauche, carte de recherche blanche à droite, puis une rangée de chiffres.",
+    "risk": "Indiscernable d’un transporteur générique, et c’est le costume déjà écarté.",
+    "comp": ".impeccable/mocks/decision/canon.jpg"
+  },
+  "buildPath": { "value": "comp", "toggle": true }
+}

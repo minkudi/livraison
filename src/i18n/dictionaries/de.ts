@@ -10,8 +10,10 @@ const de: Dictionary = {
     "Internationales Netz — über 120 Logistikplattformen — Standard- oder Expresszustellung",
   nav: {
     home: "Start",
-    services: "Leistungen",
-    network: "Unser Netz",
+    services: "Beispiel",
+    network: "Ablauf",
+    menu: "Menü",
+    label: "Navigation",
     track: "Paket verfolgen",
     trackShort: "Tracking",
   },
@@ -32,9 +34,7 @@ const de: Dictionary = {
     placeholder: "Sendungsnummer",
     submit: "Paket suchen",
     searching: "Suche läuft…",
-    checkMsg1: "Verbindung zum Logistiknetz…",
-    checkMsg2: "Hubs werden abgefragt…",
-    checkMsg3: "Route wird aktualisiert…",
+    cancel: "Abbrechen",
   },
   stats: [
     { value: "2.4", suffix: "M", label: "Zugestellte Pakete 2025" },
@@ -42,6 +42,69 @@ const de: Dictionary = {
     { value: "190", suffix: "+", label: "Abgedeckte Ziele" },
     { value: "4.6", suffix: "/5", label: "Kundenzufriedenheit" },
   ],
+  statsSection: {
+    tag: "Exzellenz",
+    title: "Unser Engagement in Zahlen",
+  },
+  beforeAfter: {
+    tag: "Transformation",
+    title: "Das Erlebnis vor und nach PRO SAT",
+    subtitle: "Entdecken Sie, wie wir das Zustellerlebnis verändern",
+    before: "Vorher",
+    after: "Nachher",
+    viewLabel: "Transformation ansehen",
+    items: [
+      {
+        beforeTitle: "Paket in Bearbeitung",
+        beforeText: "Ungewissheit bei der Zustellung",
+        afterTitle: "Zustellung bestätigt",
+        afterText: "Echtzeit-Tracking und Benachrichtigungen",
+      },
+      {
+        beforeTitle: "Unbekannte Lieferzeiten",
+        beforeText: "Keine Einsicht in den Verlauf",
+        afterTitle: "Genaue Schätzung",
+        afterText: "Vollständige, transparente Zeitleiste",
+      },
+      {
+        beforeTitle: "Begrenzte Kommunikation",
+        beforeText: "Support muss kontaktiert werden",
+        afterTitle: "Automatisch informiert",
+        afterText: "Benachrichtigungen bei jedem wichtigen Schritt",
+      },
+    ],
+  },
+  testimonials: {
+    tag: "Referenzen",
+    title: "Was unsere Kunden sagen",
+    subtitle: "Die Zufriedenheit unserer Kunden steht im Mittelpunkt unseres Engagements",
+    viewLabel: "Referenz ansehen von",
+    items: [
+      {
+        name: "Sophie Laurent",
+        role: "E-Commerce-Unternehmen",
+        content:
+          "PRO SAT hat unser Zustellerlebnis verändert. Das Echtzeit-Tracking beruhigt unsere Kunden und reduziert unsere Support-Anfragen erheblich.",
+      },
+      {
+        name: "Marc Dubois",
+        role: "Privatempfänger",
+        content:
+          "Ich schätze die vollständige Transparenz über den Weg meiner Pakete. Die Benachrichtigungen sind klar und kommen zum richtigen Zeitpunkt.",
+      },
+      {
+        name: "Clara Mercier",
+        role: "Logistikleiterin",
+        content:
+          "Die Zuverlässigkeit des Netzwerks und die Qualität des Trackings machen PRO SAT zu unserem bevorzugten Partner für internationale Sendungen.",
+      },
+    ],
+    trust: {
+      deliveries: "Erfolgreiche Zustellungen",
+      satisfaction: "Kundenzufriedenheit",
+      parcels: "Zugestellte Pakete 2025",
+    },
+  },
   services: {
     tag: "Unsere Leistungen",
     title: "Vollständige, integrierte Logistik",
@@ -114,6 +177,9 @@ const de: Dictionary = {
     trackingNumber: "Sendungsnummer",
     estimated: "Voraussichtliche Zustellung",
     destination: "Ziel",
+    stepDone: "Abgeschlossener Schritt",
+    stepCurrent: "Aktueller Schritt",
+    stepUpcoming: "Kommender Schritt",
   },
   emailPreview: {
     title: "Vorschau Transaktions-E-Mail",

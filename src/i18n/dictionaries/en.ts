@@ -9,8 +9,10 @@ const en: Dictionary = {
   topbar: "International network — 120+ logistics hubs — Standard or express delivery",
   nav: {
     home: "Home",
-    services: "Services",
-    network: "Our network",
+    services: "Sample",
+    network: "Journey",
+    menu: "Menu",
+    label: "Navigation",
     track: "Track a parcel",
     trackShort: "Track",
   },
@@ -31,9 +33,7 @@ const en: Dictionary = {
     placeholder: "Tracking number",
     submit: "Track my parcel",
     searching: "Searching…",
-    checkMsg1: "Connecting to logistics network…",
-    checkMsg2: "Querying hubs…",
-    checkMsg3: "Updating route…",
+    cancel: "Cancel",
   },
   stats: [
     { value: "2.4", suffix: "M", label: "Parcels delivered in 2025" },
@@ -41,6 +41,69 @@ const en: Dictionary = {
     { value: "190", suffix: "+", label: "Destinations covered" },
     { value: "4.6", suffix: "/5", label: "Customer satisfaction" },
   ],
+  statsSection: {
+    tag: "Excellence",
+    title: "Our commitment in figures",
+  },
+  beforeAfter: {
+    tag: "Transformation",
+    title: "The experience before and after PRO SAT",
+    subtitle: "Discover how we transform the delivery experience",
+    before: "Before",
+    after: "After",
+    viewLabel: "View transformation",
+    items: [
+      {
+        beforeTitle: "Parcel pending",
+        beforeText: "Uncertainty about delivery",
+        afterTitle: "Delivery confirmed",
+        afterText: "Real-time tracking and notifications",
+      },
+      {
+        beforeTitle: "Unknown lead times",
+        beforeText: "No visibility on the journey",
+        afterTitle: "Accurate estimate",
+        afterText: "Complete, transparent timeline",
+      },
+      {
+        beforeTitle: "Limited communication",
+        beforeText: "Need to contact support",
+        afterTitle: "Automatically informed",
+        afterText: "Notifications at every key step",
+      },
+    ],
+  },
+  testimonials: {
+    tag: "Testimonials",
+    title: "What our customers say",
+    subtitle: "Customer satisfaction is at the heart of our commitment",
+    viewLabel: "View testimonial from",
+    items: [
+      {
+        name: "Sophie Laurent",
+        role: "E-commerce company",
+        content:
+          "PRO SAT has transformed our delivery experience. Real-time tracking reassures our customers and greatly reduces our support requests.",
+      },
+      {
+        name: "Marc Dubois",
+        role: "Private recipient",
+        content:
+          "I appreciate the complete transparency on where my parcels are. The notifications are clear and arrive at the right time.",
+      },
+      {
+        name: "Clara Mercier",
+        role: "Logistics manager",
+        content:
+          "The reliability of the network and the quality of the tracking make PRO SAT our preferred partner for international shipments.",
+      },
+    ],
+    trust: {
+      deliveries: "Successful deliveries",
+      satisfaction: "Customer satisfaction",
+      parcels: "Parcels delivered in 2025",
+    },
+  },
   services: {
     tag: "Our services",
     title: "Complete, integrated logistics",
@@ -113,6 +176,9 @@ const en: Dictionary = {
     trackingNumber: "Tracking number",
     estimated: "Estimated delivery",
     destination: "Destination",
+    stepDone: "Completed step",
+    stepCurrent: "Current step",
+    stepUpcoming: "Upcoming step",
   },
   emailPreview: {
     title: "Transactional email preview",

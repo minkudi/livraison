@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T13:18:53+02:00",
+  "title": "Design System: PRO SAT",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Satellite Navy",
+        "canonical": "#0b1a33",
+        "tonalRamp": ["oklch(15% 0.053 260)", "oklch(25% 0.053 260)", "oklch(35% 0.053 260)", "oklch(45% 0.053 260)", "oklch(55% 0.053 260)", "oklch(65% 0.053 260)", "oklch(80% 0.053 260)", "oklch(95% 0.053 260)"]
+      },
+      "navy-2": {
+        "role": "primary",
+        "displayName": "Deep Route Navy",
+        "canonical": "#132744",
+        "tonalRamp": ["oklch(15% 0.060 258)", "oklch(25% 0.060 258)", "oklch(35% 0.060 258)", "oklch(45% 0.060 258)", "oklch(55% 0.060 258)", "oklch(65% 0.060 258)", "oklch(80% 0.060 258)", "oklch(95% 0.060 258)"]
+      },
+      "navy-3": {
+        "role": "primary",
+        "displayName": "Dockside Navy",
+        "canonical": "#1b3558",
+        "tonalRamp": ["oklch(15% 0.070 256)", "oklch(25% 0.070 256)", "oklch(35% 0.070 256)", "oklch(45% 0.070 256)", "oklch(55% 0.070 256)", "oklch(65% 0.070 256)", "oklch(80% 0.070 256)", "oklch(95% 0.070 256)"]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Route Gold",
+        "canonical": "#c8973e",
+        "tonalRamp": ["oklch(15% 0.120 79)", "oklch(25% 0.120 79)", "oklch(35% 0.120 79)", "oklch(45% 0.120 79)", "oklch(55% 0.120 79)", "oklch(65% 0.120 79)", "oklch(80% 0.120 79)", "oklch(95% 0.120 79)"]
+      },
+      "gold-lt": {
+        "role": "secondary",
+        "displayName": "Signal Gold",
+        "canonical": "#e0b866",
+        "tonalRamp": ["oklch(15% 0.111 84)", "oklch(25% 0.111 84)", "oklch(35% 0.111 84)", "oklch(45% 0.111 84)", "oklch(55% 0.111 84)", "oklch(65% 0.111 84)", "oklch(80% 0.111 84)", "oklch(95% 0.111 84)"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Clear White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0.000 90)", "oklch(25% 0.000 90)", "oklch(35% 0.000 90)", "oklch(45% 0.000 90)", "oklch(55% 0.000 90)", "oklch(65% 0.000 90)", "oklch(80% 0.000 90)", "oklch(95% 0.000 90)"]
+      },
+      "g50": {
+        "role": "neutral",
+        "displayName": "Cool Mist",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["oklch(15% 0.003 248)", "oklch(25% 0.003 248)", "oklch(35% 0.003 248)", "oklch(45% 0.003 248)", "oklch(55% 0.003 248)", "oklch(65% 0.003 248)", "oklch(80% 0.003 248)", "oklch(95% 0.003 248)"]
+      },
+      "g100": {
+        "role": "neutral",
+        "displayName": "Pale Slate",
+        "canonical": "#f1f5f9",
+        "tonalRamp": ["oklch(15% 0.007 248)", "oklch(25% 0.007 248)", "oklch(35% 0.007 248)", "oklch(45% 0.007 248)", "oklch(55% 0.007 248)", "oklch(65% 0.007 248)", "oklch(80% 0.007 248)", "oklch(95% 0.007 248)"]
+      },
+      "g200": {
+        "role": "neutral",
+        "displayName": "Route Divider",
+        "canonical": "#e2e8f0",
+        "tonalRamp": ["oklch(15% 0.013 256)", "oklch(25% 0.013 256)", "oklch(35% 0.013 256)", "oklch(45% 0.013 256)", "oklch(55% 0.013 256)", "oklch(65% 0.013 256)", "oklch(80% 0.013 256)", "oklch(95% 0.013 256)"]
+      },
+      "g300": {
+        "role": "neutral",
+        "displayName": "Soft Slate",
+        "canonical": "#cbd5e1",
+        "tonalRamp": ["oklch(15% 0.020 253)", "oklch(25% 0.020 253)", "oklch(35% 0.020 253)", "oklch(45% 0.020 253)", "oklch(55% 0.020 253)", "oklch(65% 0.020 253)", "oklch(80% 0.020 253)", "oklch(95% 0.020 253)"]
+      },
+      "g400": {
+        "role": "neutral",
+        "displayName": "Blue Haze",
+        "canonical": "#94a3b8",
+        "tonalRamp": ["oklch(15% 0.035 257)", "oklch(25% 0.035 257)", "oklch(35% 0.035 257)", "oklch(45% 0.035 257)", "oklch(55% 0.035 257)", "oklch(65% 0.035 257)", "oklch(80% 0.035 257)", "oklch(95% 0.035 257)"]
+      },
+      "denim": {
+        "role": "neutral",
+        "displayName": "Denim Text",
+        "canonical": "#5b7c9a",
+        "tonalRamp": ["oklch(15% 0.060 246)", "oklch(25% 0.060 246)", "oklch(35% 0.060 246)", "oklch(45% 0.060 246)", "oklch(55% 0.060 246)", "oklch(65% 0.060 246)", "oklch(80% 0.060 246)", "oklch(95% 0.060 246)"]
+      },
+      "heading": {
+        "role": "neutral",
+        "displayName": "Heading Blue",
+        "canonical": "#2e4a66",
+        "tonalRamp": ["oklch(15% 0.058 249)", "oklch(25% 0.058 249)", "oklch(35% 0.058 249)", "oklch(45% 0.058 249)", "oklch(55% 0.058 249)", "oklch(65% 0.058 249)", "oklch(80% 0.058 249)", "oklch(95% 0.058 249)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Large public hero headings."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page and section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and supporting section titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory content and form copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact form labels and metadata captions."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Button labels and compact primary actions."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-search-lift",
+        "value": "0 25px 60px rgba(0,0,0,0.22)",
+        "purpose": "Separates the public tracking card from the dark hero field."
+      },
+      {
+        "name": "quiet-card-lift",
+        "value": "0 1px 2px rgba(0,0,0,0.05)",
+        "purpose": "Adds a restrained edge to status cards and selected controls."
+      }
+    ],
+    "motion": [
+      {
+        "name": "standard-transition",
+        "value": "0.15s ease",
+        "purpose": "Short color and background transitions on navigation."
+      },
+      {
+        "name": "page-enter",
+        "value": "0.32s ease-out",
+        "purpose": "Subtle entry movement for page content."
+      },
+      {
+        "name": "timeline-in",
+        "value": "0.3s ease-out",
+        "purpose": "Staggered arrival of tracking timeline items; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A confident navy action for navigation and admin workflows.",
+      "html": "<button class=\"ds-btn-primary\">Create shipment</button>",
+      "css": ".ds-btn-primary { background: var(--navy, #0b1a33); color: var(--white, #fff); padding: 12px 24px; border: 0; border-radius: 12px; font: 700 12px/1.4 var(--font-jakarta, system-ui), sans-serif; cursor: pointer; transition: background-color 0.15s ease, transform 0.15s ease; } .ds-btn-primary:hover { background: var(--navy-2, #132744); } .ds-btn-primary:focus-visible { outline: 3px solid var(--gold, #c8973e); outline-offset: 3px; } .ds-btn-primary:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Tracking Action",
+      "kind": "button",
+      "refersTo": "button-track",
+      "description": "The gold call to action paired with the public tracking search.",
+      "html": "<button class=\"ds-btn-track\">Track parcel</button>",
+      "css": ".ds-btn-track { background: var(--gold, #c8973e); color: var(--white, #fff); padding: 14px 24px; border: 0; border-radius: 10px; font: 700 14px/1.4 var(--font-jakarta, system-ui), sans-serif; cursor: pointer; transition: background-color 0.15s ease, transform 0.15s ease; } .ds-btn-track:hover { background: var(--gold-lt, #e0b866); } .ds-btn-track:focus-visible { outline: 3px solid var(--navy, #0b1a33); outline-offset: 3px; } .ds-btn-track:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Tracking Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A high-visibility white field with a clear focus treatment.",
+      "html": "<label class=\"ds-search-label\" for=\"ds-tracking\">Tracking number</label><input class=\"ds-search-input\" id=\"ds-tracking\" placeholder=\"Enter your tracking number\" />",
+      "css": ".ds-search-label { display: block; margin-bottom: 6px; color: var(--denim, #5b7c9a); font: 700 12px/1.4 var(--font-jakarta, system-ui), sans-serif; } .ds-search-input { width: 100%; background: var(--white, #fff); color: var(--heading, #2e4a66); padding: 14px 16px; border: 2px solid var(--g200, #e2e8f0); border-radius: 10px; font: 400 14px/1.5 var(--font-jakarta, system-ui), sans-serif; transition: border-color 0.15s ease, box-shadow 0.15s ease; } .ds-search-input::placeholder { color: var(--denim, #5b7c9a); opacity: 0.5; } .ds-search-input:focus-visible { border-color: var(--denim, #5b7c9a); outline: 0; box-shadow: 0 0 0 2px rgba(91,124,154,0.2); }"
+    },
+    {
+      "name": "Tracking Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A white, quietly bordered surface for shipment details.",
+      "html": "<article class=\"ds-tracking-card\"><h3>Shipment status</h3><p>In transit</p></article>",
+      "css": ".ds-tracking-card { background: var(--white, #fff); color: var(--heading, #2e4a66); padding: 24px; border: 1px solid var(--g200, #e2e8f0); border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-tracking-card h3 { margin: 0; font: 800 20px/1.3 var(--font-jakarta, system-ui), sans-serif; } .ds-tracking-card p { margin: 8px 0 0; color: var(--denim, #5b7c9a); font: 400 14px/1.5 var(--font-jakarta, system-ui), sans-serif; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "A compact public header link with a quiet hover surface.",
+      "html": "<a class=\"ds-nav-link\" href=\"#services\">Services</a>",
+      "css": ".ds-nav-link { display: inline-flex; align-items: center; border-radius: 8px; padding: 8px 14px; color: var(--denim, #5b7c9a); font: 600 13px/1.4 var(--font-jakarta, system-ui), sans-serif; text-decoration: none; transition: color 0.15s ease, background-color 0.15s ease; } .ds-nav-link:hover { color: var(--heading, #2e4a66); background: var(--g100, #f1f5f9); } .ds-nav-link:focus-visible { outline: 3px solid var(--gold, #c8973e); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Connected Route",
+    "overview": "PRO SAT’s visual system connects a public tracking experience with the operational tools behind each shipment. Deep navy creates a steady, recognizable frame; gold marks emphasis and moments of action; cool blue-grays keep shipment information calm and easy to scan. The satellite identity gives the logistics brand a specific mark without turning the interface into transport-themed decoration.\n\nTypography and components are direct and practical rather than ornamental. Public pages use generous, centered content widths and a prominent tracking search; admin screens bring the same color and type vocabulary to denser forms and tables. Both remain responsive, with compact mobile navigation and content that reflows rather than shrinking into desktop layouts.",
+    "keyCharacteristics": [
+      "A deep navy foundation with restrained gold emphasis.",
+      "Clear, high-weight headings paired with readable, compact supporting text.",
+      "White cards and cool gray-blue borders that organize shipment details.",
+      "Rounded, touch-friendly controls within a spacious responsive grid."
+    ],
+    "rules": [
+      {
+        "name": "The Navy-First Route Rule",
+        "body": "Keep navy as the stable anchor for primary navigation and key actions; use gold to distinguish emphasis rather than replacing the anchor.",
+        "section": "colors"
+      },
+      {
+        "name": "The Legible Label Rule",
+        "body": "Keep labels compact and clearly subordinate to their values; use weight and restrained tracking for hierarchy, not display-sized uppercase text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Purposeful Lift Rule",
+        "body": "Reserve stronger elevation for the hero search card; use borders and surface contrast for ordinary content.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the established navy, gold, and cool blue-gray palette as the shared thread between public pages and admin tools.",
+      "Do keep tracking actions, shipment status, and metadata visually distinct through hierarchy, spacing, and restrained color.",
+      "Do let content grids and search controls reflow at the existing responsive breakpoints.",
+      "Do preserve the PRO SAT satellite mark as the brand identifier.",
+      "Do respect reduced-motion preferences for animated page, tracking, and timeline states."
+    ],
+    "donts": [
+      "Don't replace the established satellite brand mark with a generic parcel or truck logo.",
+      "Don't use the hero’s strongest shadow as the default treatment for every card.",
+      "Don't make gold the dominant page background or the default surface for unrelated content.",
+      "Don't hide the mobile tracking action when collapsing desktop navigation."
+    ]
+  }
+}
